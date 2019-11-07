@@ -1,0 +1,12 @@
+<div id="app">
+    <button v-bind:disabled="buttonDisabled">Test button</button>
+    <button :disabled="buttonDisabled">Second disabled </button>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({ el: '#app',
+        data: {
+            buttonDisabled: true
+    }
+    });
+</script>
