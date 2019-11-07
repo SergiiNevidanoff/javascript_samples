@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple List</title>
+</head>
+<body>
+
+<div id="app">
+    <p>The first manufacturer is {{ manufacturers[0] }}</p>
+    <p>All the manufacturers are {{ manufacturers }}</p>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app', data: {
+            manufacturers: ['Toyota', 'Renault', 'Mercedes', 'Volkswagen', "Tesla", "Nissan"]
+        }
+    });
+</script>
+
+</body>
+</html>

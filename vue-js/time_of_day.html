@@ -1,27 +1,24 @@
 <html>
 
 <head>
-    <title>Welcome according to time of the day</title>
+    <title>Greeting according to time of the day</title>
 </head>
 
 <body>
 
 <div id="app">
-    <p v-if="isMorning">Good morning!</p>
-    <p v-if="isAfternoon">Good afternoon!</p>
-    <p v-if="isEvening">Good evening!</p>
+    <p v-if="hours < 12">Good morning!</p>
+    <p v-if="hours >= 12 && hours < 18">Good afternoon!</p>
+    <p v-if="hours >= 18">Good evening!</p>
 </div>
 
 <script src="https://unpkg.com/vue"></script>
 <script>
-    const hours = new Date().getHours();
 
     new Vue({
         el: '#app',
         data: {
-            isMorning: hours < 12,
-            isAfternoon: hours >= 12 && hours < 18,
-            isEvening: hours >= 18
+            hours: new Date().getHours()
         }
     });
 </script>
