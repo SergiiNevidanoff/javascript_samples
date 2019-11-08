@@ -1,0 +1,16 @@
+<div id="app">
+    <p>The sum of the positive numbers is {{ numbersTotal }}</p>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app', data: {
+            numbers: [-5, 0, 2, -1, 1, 0.5]
+        },
+        computed: {
+            numberTotal() {
+                return numbers.reduce((sum, val) => sum + val);
+            }
+        }
+    });
+</script>
